@@ -19,8 +19,12 @@ header {
 
 .imagen-principal img {
   width: 100%;
+  max-width: 400px;  
   height: auto;
   display: block;
+  margin: 0 auto 20px auto; 
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
 }
 
 .talleres {
@@ -85,89 +89,68 @@ footer {
   }
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  background-color: #F5F5F5;
-  color: #2E2E2E;
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: #D72638;
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  background-color: #1B1F3B;
-  color: white;
-  padding: 20px;
+.contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   text-align: center;
+  color: #333;
 }
 
-.imagen-principal img {
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
-  height: auto;
-  display: block;
-}
-
-.talleres {
-  padding: 20px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  background-color: white;
-  border: 2px solid #F0C808;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
-  max-width: 300px;
+  box-sizing: border-box;
 }
 
-.contacto {
-  background-color: #fff;
-  padding: 20px;
+.form-group textarea {
+  resize: vertical;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, select, button {
-  padding: 10px;
-  border: 1px solid #CCC;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #D72638;
+button[type="submit"] {
+  background-color: #1f3c88;
   color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  display: block;
+  margin: 1rem auto 0;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #b71c2c;
-}
-
-footer {
-  background-color: #2E2E2E;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
+button[type="submit"]:hover {
+  background-color: #162b65;
 }
